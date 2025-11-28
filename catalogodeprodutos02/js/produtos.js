@@ -1,22 +1,16 @@
 // produtos.js - carregamento AJAX e renderização (adaptado)
-let productsData = null;
+window.productsData = null;
 let isLoading = false;
 
-const $loadBtn = $('#load-products');
-const $loading = $('#loading');
-const $errorMessage = $('#error-message');
-const $errorText = $('#error-text');
-const $successMessage = $('#success-message');
-const $successText = $('#success-text');
-const $productsContainer = $('#products-container');
-const $productsCount = $('#products-count');
+// Declarar variáveis sem inicializar
+let $loadBtn, $loading, $errorMessage, $errorText, $successMessage, $successText, $productsContainer, $productsCount;
 
 function loadProducts() {
     if (isLoading) return;
     isLoading = true;
     showLoadingState();
     $.ajax({
-        url: 'data/produtos.json',
+        url: 'produtos.json',
         type: 'GET',
         dataType: 'json',
         timeout: 10000,
@@ -28,26 +22,26 @@ function loadProducts() {
         },
         complete: function() {
             isLoading = false;
-            $loadBtn.prop('disabled', false).removeClass('disabled');
+            if ($loadBtn) $loadBtn.prop('disabled', false).removeClass('disabled');
         }
     });
 }
 
 function showLoadingState() {
-    $errorMessage.hide();
-    $successMessage.hide();
-    $loading.show();
-    $loadBtn.prop('disabled', true).addClass('disabled');
-    if ($productsCount.length) $productsCount.text('Carregando produtos...');
+    if ($errorMessage) $errorMessage.hide();
+    if ($successMessage) $successMessage.hide();
+    if ($loading) $loading.show();
+    if ($loadBtn) $loadBtn.prop('disabled', true).addClass('disabled');
+    if ($productsCount) $productsCount.text('Carregando produtos...');
 }
 
 function handleSuccess(response) {
-    $loading.hide();
+    if ($loading) $loading.hide();
     if (!isValidResponse(response)) {
         showError('Estrutura de dados inválida no arquivo JSON');
         return;
     }
-    productsData = response;
+    window.productsData = response;
     showSuccessMessage(response.mensagem || 'Produtos carregados com sucesso!');
     displayProducts(response.produtos);
     updateProductsCount(response.produtos.length);
@@ -55,8 +49,8 @@ function handleSuccess(response) {
 }
 
 function handleError(xhr, status, error) {
-    $loading.hide();
-    $loadBtn.prop('disabled', false).removeClass('disabled');
+    if ($loading) $loading.hide();
+    if ($loadBtn) $loadBtn.prop('disabled', false).removeClass('disabled');
     let errorMessage = 'Erro ao carregar produtos: ';
     switch (status) {
         case 'timeout':
@@ -95,22 +89,24 @@ function isValidResponse(response) {
 }
 
 function showError(message) {
-    $errorText.text(message);
-    $errorMessage.fadeIn(300);
-    setTimeout(()=> $errorMessage.fadeOut(400), 10000);
+    if ($errorText) $errorText.text(message);
+    if ($errorMessage) $errorMessage.fadeIn(300);
+    setTimeout(()=> { if ($errorMessage) $errorMessage.fadeOut(400); }, 10000);
 }
 
 function showSuccessMessage(message) {
-    $successText.text(message);
-    $successMessage.fadeIn(300);
-    $loadBtn.prop('disabled', false).removeClass('disabled');
-    setTimeout(()=> $successMessage.fadeOut(400), 5000);
+    if ($successText) $successText.text(message);
+    if ($successMessage) $successMessage.fadeIn(300);
+    if ($loadBtn) $loadBtn.prop('disabled', false).removeClass('disabled');
+    setTimeout(()=> { if ($successMessage) $successMessage.fadeOut(400); }, 5000);
 }
 
 function displayProducts(products) {
+    if (!$productsContainer) return;
+    
     $productsContainer.empty();
     if (!products || products.length === 0) {
-        $productsContainer.html('<div class=\"no-products\"><h3>Nenhum produto encontrado</h3></div>');
+        $productsContainer.html('<div class="no-products"><h3>Nenhum produto encontrado</h3></div>');
         return;
     }
     products.forEach(product=>{
@@ -158,18 +154,27 @@ function formatPrice(price) {
 }
 
 function updateProductsCount(count) {
-    if ($productsCount.length) $productsCount.text(`${count} produto(s) carregado(s)`);
+    if ($productsCount) $productsCount.text(`${count} produto(s) carregado(s)`);
 }
 
-function getProductsData(){ return productsData; }
-function isDataLoaded(){ return productsData !== null; }
-function reloadProducts(){ productsData = null; loadProducts(); }
+function getProductsData(){ return window.productsData; }
+function isDataLoaded(){ return window.productsData !== null; }
+function reloadProducts(){ window.productsData = null; loadProducts(); }
 
 $(document).ready(function(){
+    // INICIALIZAR VARIÁVEIS AQUI - quando o DOM estiver pronto
+    $loadBtn = $('#load-products');
+    $loading = $('#loading');
+    $errorMessage = $('#error-message');
+    $errorText = $('#error-text');
+    $successMessage = $('#success-message');
+    $successText = $('#success-text');
+    $productsContainer = $('#products-container');
+    $productsCount = $('#products-count');
+
     $loadBtn.on('click', loadProducts);
     $(document).on('keypress', function(e){ if(e.which===13) loadProducts(); });
-    $(document).on('click', '.view-details', function(){ const id=$(this).data('id'); if(productsData && productsData.produtos){ const p = productsData.produtos.find(x=>x.id==id); if(p) showProductDetails(p); } });
+    // REMOVIDO: handler duplicado para .view-details
 });
 
-function showProductDetails(product){ console.log('Detalhes:', product); }
 if (typeof module !== 'undefined' && module.exports) module.exports = { loadProducts, getProductsData, isDataLoaded, reloadProducts };

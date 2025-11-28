@@ -1,0 +1,96 @@
+{
+  "mensagem": "Catálogo carregado com sucesso!",
+  "total": 10,
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook Gamer",
+      "categoria": "Eletrônicos",
+      "preco": 4500.0,
+      "descricao": "Intel i7, 16GB RAM, RTX 3060",
+      "imagem": "https://static.mobly.com.br/p/Mobly-Cadeira-Gamer-Creed-Creme-e-Laranja-5050-9257321-3.jpg",
+      "estoque": 15
+    },
+    {
+      "id": 2,
+      "nome": "Mouse Gamer RGB",
+      "categoria": "Periféricos",
+      "preco": 150.0,
+      "descricao": "12000 DPI, 7 botões programáveis",
+      "imagem": "https://imgs.search.brave.com/kEKtkE0Le4an-ttTKAyUfXkTmxuJOnsjPr87R3Vm0DE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuaGF5YXBlay5j/b20uYnIvcHJvZHV0/b3MvNzcyNDYvNTUw/LzIud2VicA",
+      "estoque": 50
+    },
+    {
+      "id": 3,
+      "nome": "Teclado Mecânico",
+      "categoria": "Periféricos",
+      "preco": 320.5,
+      "descricao": "Switches azuis, retroiluminação RGB",
+      "imagem": "https://imgs.search.brave.com/ISr9uELg_UxJI403YoyN-r8iVoTB0Tku531nRcevuSQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkyOTE4OC1NTEE5/NTY2ODAwODc5NF8x/MDIwMjUtRS53ZWJw",
+      "estoque": 8
+    },
+    {
+      "id": 4,
+      "nome": "Monitor 27\" 144Hz",
+      "categoria": "Eletrônicos",
+      "preco": 1899.9,
+      "descricao": "Full HD, 144Hz, 1ms",
+      "imagem": "https://imgs.search.brave.com/ik5GeAuuH_ohhUiFugcXlY7vuA59fD1YgJ62ZvG9cN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzk5MTY4MC1NTEI5/ODE1NzU0MjI4NF8x/MTIwMjUtRS1tb25p/dG9yLTI3LWZoZC01/bXMtNjBoei1oZG1p/LXZnYS1yZWR1dG9y/LWx1ei1henVsLWJp/dm9sdC53ZWJw",
+      "estoque": 5
+    },
+    {
+      "id": 5,
+      "nome": "Cadeira Gamer",
+      "categoria": "Móveis",
+      "preco": 899.0,
+      "descricao": "Suporte lombar, espuma gel",
+      "imagem": "https://imgs.search.brave.com/k6yyO2hELEJSV5YocccTowIILk_99rprbHlWTbuRBpw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXct/c3RhdGljLm1vYmx5/LmNvbS5ici9fbmV4/dC9pbWFnZT91cmw9/aHR0cHM6Ly9zdGF0/aWMubW9ibHkuY29t/LmJyL3AvTEVYLUNh/ZGVpcmEtR2FtZXIt/VGl0YW5zLUh5cGVy/aW9uLVByZXRhLWUt/QnJhbmNhLTE0MzAt/OTk0MTg4LTEuanBn/JnE9NzUmdz0yNTY",
+      "estoque": 12
+    },
+    {
+      "id": 6,
+      "nome": "Headset Estéreo",
+      "categoria": "Periféricos",
+      "preco": 249.99,
+      "descricao": "Som estéreo, microfone omnidirecional",
+      "imagem": "https://imgs.search.brave.com/BWyYaO15HowCfOZNH6-VKFE7gqhZcZI3BLe951-5JlE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHAuY29tL2NvbnRl/bnQvZGFtL3NpdGVz/L3dvcmxkd2lkZS9w/b2x5L2hlYWRzZXRz/L1BvbHlfYmxhY2t3/aXJlXzgyMjVAMngu/anBn",
+      "estoque": 30
+    },
+    {
+      "id": 7,
+      "nome": "Placa de Vídeo RTX 4060",
+      "categoria": "Componentes",
+      "preco": 2899.0,
+      "descricao": "8GB GDDR6, suporte ray-tracing",
+      "imagem": "https://imgs.search.brave.com/EqsSW5xLYSYSVgZHNMM-mknhCInl6VJ_-IBa1isrGms/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnpz/dC5jb20uYnIvdGh1/bWJzLzQ1LzNiLzNh/Ly0xNDU4Njg3Mzk3/LmpwZw",
+      "estoque": 3
+    },
+    {
+      "id": 8,
+      "nome": "SSD 1TB NVMe",
+      "categoria": "Componentes",
+      "preco": 429.9,
+      "descricao": "Leitura 3500MB/s, garantia 5 anos",
+      "imagem": "https://imgs.search.brave.com/epkZGAPSeIYfUf8zInZkFQo8RMSJXF_5c5P2wkTN_Ok/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnpz/dC5jb20uYnIvdGh1/bWJzLzQ1L2IvMTkv/LTE0NjAwOTA2OTMu/anBn",
+      "estoque": 40
+    },
+    {
+      "id": 9,
+      "nome": "Fonte 650W 80+ Bronze",
+      "categoria": "Componentes",
+      "preco": 319.0,
+      "descricao": "Modular, eficiente e silenciosa",
+      "imagem": "https://imgs.search.brave.com/CH6PBzbeI4VAW0RcyEOVu27a2uIhi7Ae8dzncKNEX54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/dGVyYWJ5dGVzaG9w/LmNvbS5ici9wcm9k/dXRvL2cvZm9udGUt/YXNyb2NrLWNoYWxs/ZW5nZXItNjUwdy04/MC1wbHVzLWJyb256/ZS1wZmMtYXRpdm8t/cHJldG8tY2wtNjUw/Yl8yMjEyOTcuanBn",
+      "estoque": 22
+    },
+    {
+      "id": 10,
+      "nome": "Webcam 1080p",
+      "categoria": "Periféricos",
+      "preco": 179.9,
+      "descricao": "1080p@30fps, microfone integrado",
+      "imagem": "https://imgs.search.brave.com/cwMTfLVZCjkIxpUiyE4VuwhXtf8c8KOzeI-519frY7s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFYalpGM0FTY0wu/anBn",
+      "estoque": 0
+    }
+  ]
+}
