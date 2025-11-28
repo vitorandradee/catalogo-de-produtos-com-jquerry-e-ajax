@@ -1,0 +1,5 @@
+@media (max-width:600px){
+  .search-row{flex-direction:column}
+  .control-row{flex-direction:column;align-items:stretch}
+  .product-image{height:140px}
+}

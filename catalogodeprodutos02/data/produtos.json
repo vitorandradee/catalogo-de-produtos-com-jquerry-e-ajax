@@ -1,0 +1,96 @@
+{
+  "mensagem": "Catálogo carregado com sucesso!",
+  "total": 10,
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook Gamer",
+      "categoria": "Eletrônicos",
+      "preco": 4500.0,
+      "descricao": "Intel i7, 16GB RAM, RTX 3060",
+      "imagem": "assets/images/product1.png",
+      "estoque": 15
+    },
+    {
+      "id": 2,
+      "nome": "Mouse Gamer RGB",
+      "categoria": "Periféricos",
+      "preco": 150.0,
+      "descricao": "12000 DPI, 7 botões programáveis",
+      "imagem": "assets/images/product2.png",
+      "estoque": 50
+    },
+    {
+      "id": 3,
+      "nome": "Teclado Mecânico",
+      "categoria": "Periféricos",
+      "preco": 320.5,
+      "descricao": "Switches azuis, retroiluminação RGB",
+      "imagem": "assets/images/product3.png",
+      "estoque": 8
+    },
+    {
+      "id": 4,
+      "nome": "Monitor 27\" 144Hz",
+      "categoria": "Eletrônicos",
+      "preco": 1899.9,
+      "descricao": "Full HD, 144Hz, 1ms",
+      "imagem": "assets/images/product4.png",
+      "estoque": 5
+    },
+    {
+      "id": 5,
+      "nome": "Cadeira Gamer",
+      "categoria": "Móveis",
+      "preco": 899.0,
+      "descricao": "Suporte lombar, espuma gel",
+      "imagem": "assets/images/product5.png",
+      "estoque": 12
+    },
+    {
+      "id": 6,
+      "nome": "Headset Estéreo",
+      "categoria": "Periféricos",
+      "preco": 249.99,
+      "descricao": "Som estéreo, microfone omnidirecional",
+      "imagem": "assets/images/product6.png",
+      "estoque": 30
+    },
+    {
+      "id": 7,
+      "nome": "Placa de Vídeo RTX 4060",
+      "categoria": "Componentes",
+      "preco": 2899.0,
+      "descricao": "8GB GDDR6, suporte ray-tracing",
+      "imagem": "assets/images/product7.png",
+      "estoque": 3
+    },
+    {
+      "id": 8,
+      "nome": "SSD 1TB NVMe",
+      "categoria": "Componentes",
+      "preco": 429.9,
+      "descricao": "Leitura 3500MB/s, garantia 5 anos",
+      "imagem": "assets/images/product8.png",
+      "estoque": 40
+    },
+    {
+      "id": 9,
+      "nome": "Fonte 650W 80+ Bronze",
+      "categoria": "Componentes",
+      "preco": 319.0,
+      "descricao": "Modular, eficiente e silenciosa",
+      "imagem": "assets/images/product9.png",
+      "estoque": 22
+    },
+    {
+      "id": 10,
+      "nome": "Webcam 1080p",
+      "categoria": "Periféricos",
+      "preco": 179.9,
+      "descricao": "1080p@30fps, microfone integrado",
+      "imagem": "assets/images/product10.png",
+      "estoque": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo de Produtos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Catálogo de Produtos</h1>
+    <p class="subtitle">Carregue, busque, filtre e visualize detalhes dos produtos</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="control-row">
+        <button id="load-products" class="btn primary">Carregar Produtos</button>
+        <div id="loading" class="loading" style="display:none">Carregando...</div>
+      </div>
+
+      <div class="search-row">
+        <input id="search" placeholder="Buscar por nome..." />
+        <select id="filterCat"><option value="">Todas as categorias</option></select>
+        <select id="sortBy">
+          <option value="">Ordenar por</option>
+          <option value="nome">Nome (A → Z)</option>
+          <option value="preco-asc">Preço (menor primeiro)</option>
+          <option value="preco-desc">Preço (maior primeiro)</option>
+        </select>
+      </div>
+      <div id="products-count" class="products-count">Nenhum produto carregado</div>
+      <div id="error-message" class="alert error" style="display:none"><span id="error-text"></span></div>
+      <div id="success-message" class="alert success" style="display:none"><span id="success-text"></span></div>
+    </section>
+
+    <section id="products-container" class="products-grid">
+      <!-- Product cards injected here -->
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" style="display:none">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small>Projeto exemplo - catálogo de produtos (dados locais JSON via AJAX)</small>
+  </footer>
+</body>
+</html>
