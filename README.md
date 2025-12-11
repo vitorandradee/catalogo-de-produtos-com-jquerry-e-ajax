@@ -15,6 +15,9 @@ Kauã Raphael Lemos de Oliveira - 01823587
 <br/>
 Matheus Novaes Pereira de Melo - 01787815
 <br/>
+João Guilherme Soares Ramos - 01808602
+<br/>
+
 
 
 
